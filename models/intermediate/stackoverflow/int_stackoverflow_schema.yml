@@ -1,0 +1,152 @@
+version: 2
+models:
+  - name: int_stackoverflow_questions
+    description: "Stack overflow questions matched with tags from google sheet"
+    columns:
+      - name: uni_pk
+        description: Unique ID primary key.
+        tests:
+          - not_null
+
+      - name: gsheet_id
+        description: Id from google sheet.
+
+      - name: tags
+        description: Matched tags.
+
+      - name: creation_date_datetime_utc
+        description: Question timestamp creation date.
+
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: timestamp
+
+      - name: title
+        description: ""
+
+      - name: body
+        description: ""
+
+      - name: accepted_answer_id
+        description: ""
+
+      - name: answer_count
+        description: ""
+
+      - name: comment_count
+        description: ""
+
+      - name: community_owned_date_datetime_utc
+        description: ""
+
+      - name: creation_date_datetime_utc
+        description: ""
+
+      - name: favorite_count
+        description: ""
+
+      - name: last_activity_date_datetime_utc
+        description: ""
+
+      - name: last_edit_date_datetime_utc
+        description: ""
+
+      - name: last_editor_display_name
+        description: ""
+
+      - name: last_editor_user_id
+        description: ""
+
+      - name: owner_display_name
+        description: ""
+
+      - name: owner_user_id
+        description: ""
+
+      - name: parent_id
+        description: ""
+
+      - name: post_type_id
+        description: ""
+
+      - name: score
+        description: ""
+
+      - name: view_count
+        description: ""
+
+  - name: int_stackoverflow_answers
+    description: "Stack overflow answers matched with tags from google sheet"
+    columns:
+      - name: uni_pk
+        description: Unique ID primary key.
+        tests:
+          - not_null
+
+      - name: gsheet_id
+        description: Id from google sheet.
+
+      - name: tags
+        description: Matched tags.
+
+      - name: creation_date_datetime_utc
+        description: Question timestamp creation date.
+        tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: [ timestamp, datetime ]
+
+      - name: title
+        description: ""
+
+      - name: body
+        description: ""
+
+      - name: accepted_answer_id
+        description: ""
+
+      - name: answer_count
+        description: ""
+
+      - name: comment_count
+        description: ""
+
+      - name: community_owned_date_datetime_utc
+        description: ""
+
+      - name: creation_date_datetime_utc
+        description: ""
+
+      - name: favorite_count
+        description: ""
+
+      - name: last_activity_date_datetime_utc
+        description: ""
+
+      - name: last_edit_date_datetime_utc
+        description: ""
+
+      - name: last_editor_display_name
+        description: ""
+
+      - name: last_editor_user_id
+        description: ""
+
+      - name: owner_display_name
+        description: ""
+
+      - name: owner_user_id
+        description: ""
+
+      - name: parent_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: post_type_id
+        description: ""
+
+      - name: score
+        description: ""
+
+      - name: view_count
+        description: ""

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_github_sql
+    description: Github daily tables in {{ var('github_date') }}
+    columns:
+      - name: github_pk
+        description: Unique ID primary key
+        tests:
+          - unique
+          - not_null
+      - name: type
+        description: https://developer.github.com/v3/activity/events/types/
+      - name: actor_id
+        description: ""
+      - name: organisation
+        description: ""
+      - name: repository_account
+        description: ""
+      - name: repository_name
+        description: ""
+      - name: created_at_datetime_utc
+        description: Creation timestamp

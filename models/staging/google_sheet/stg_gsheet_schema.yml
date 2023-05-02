@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_gsheet_sql
+    description: ""
+    columns:
+      - name: organization
+        description: "Unique ID key"
+        tests:
+          - unique
+          - not_null
+
+      - name: repository_account
+        description: ""
+
+      - name: repository_name
+        description: ""
+
+      - name: l1_type
+        description: ""
+
+      - name: l2_type
+        description: ""
+
+      - name: l3_type
+        description: ""
+
+      - name: tags
+        description: ""
+
+      - name: is_open_source_available
+        description: ""

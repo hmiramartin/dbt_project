@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: day
+    description: "{{ doc('src_github_description') }}"
+    database: githubarchive
+    tables:
+      - name: grouped_year
+        identifier: "{{ var('github_date') }}*"

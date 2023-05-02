@@ -1,0 +1,176 @@
+version: 2
+models:
+  - name: mart_github_daily
+    description: github events by day
+    columns:
+      - name: github_pk
+        description: UNIQUE ID PK
+        tests:
+          - unique
+          - not_null
+      - name: first_day_of_period
+        description: First day of the actual period
+      - name: month
+        description: Month of the period
+      - name: year
+        description: Year of the period
+      - name: quarter
+        description: Quarter of the period
+      - name: organization_name
+        description: Name of the company in a string format
+      - name: repository_account
+        description: Name of the repository account
+      - name: repository_name
+        description: Name of the repository
+      - name: event_count
+        description: Count of all events
+      - name: user_count
+        description: Count of all users
+      - name: follow_count
+        description: Count of all FollowEvent events
+      - name: issues_count
+        description: Count of all IssuesEvent events
+      - name: watch_count
+        description: Count of all WatchEvent events
+      - name: fork_count
+        description: Count of all ForkEvent events
+      - name: push_count
+        description: Count of all PushEvent events
+      - name: pr_count
+        description: Count of all PullRequestEvent events
+      - name: delete_count
+        description: Count of all DeleteEvent events
+      - name: public_count
+        description: Count of all PublicEvent events
+      - name: create_count
+        description: Count of all CreateEvent events
+      - name: forkapply_count
+        description: Count of all ForkApplyEvent events
+      - name: gollum_count
+        description: Count off all GollumEvent events
+      - name: member_count
+        description: Count of all MemberEvent events
+      - name: gist_count
+        description: Count of all GistEvent events
+      - name: commit_comment_count
+        description: Count of all CommitCommentEvent events
+      - name: download_count
+        description: Count of all DownloadEvent events
+      - name: total_event_count
+        description: Sum of all events
+  - name: mart_github_monthly
+    description: github events by month
+    columns:
+      - name: github_pk
+        description: UNIQUE ID PK
+        tests:
+          - unique
+          - not_null
+      - name: first_day_of_period
+        description: First day of the actual period
+      - name: month
+        description: Month of the period
+      - name: year
+        description: Year of the period
+      - name: quarter
+        description: Quarter of the period
+      - name: organization_name
+        description: Name of the company in a string format
+      - name: repository_account
+        description: Name of the repository account
+      - name: repository_name
+        description: Name of the repository
+      - name: event_count
+        description: Count of all events
+      - name: user_count
+        description: Count of all users
+      - name: follow_count
+        description: Count of all FollowEvent events
+      - name: issues_count
+        description: Count of all IssuesEvent events
+      - name: watch_count
+        description: Count of all WatchEvent events
+      - name: fork_count
+        description: Count of all ForkEvent events
+      - name: push_count
+        description: Count of all PushEvent events
+      - name: pr_count
+        description: Count of all PullRequestEvent events
+      - name: delete_count
+        description: Count of all DeleteEvent events
+      - name: public_count
+        description: Count of all PublicEvent events
+      - name: create_count
+        description: Count of all CreateEvent events
+      - name: forkapply_count
+        description: Count of all ForkApplyEvent events
+      - name: gollum_count
+        description: Count off all GollumEvent events
+      - name: member_count
+        description: Count of all MemberEvent events
+      - name: gist_count
+        description: Count of all GistEvent events
+      - name: commit_comment_count
+        description: Count of all CommitCommentEvent events
+      - name: download_count
+        description: Count of all DownloadEvent events
+      - name: total_event_count
+        description: Sum of all events
+  - name: mart_github_quarterly
+    description: github events by quarters
+    columns:
+      - name: github_pk
+        description: UNIQUE ID PK
+        tests:
+          - unique
+          - not_null
+      - name: first_day_of_period
+        description: First day of the actual period
+      - name: month
+        description: Month of the period
+      - name: year
+        description: Year of the period
+      - name: quarter
+        description: Quarter of the period
+      - name: organization_name
+        description: Name of the company in a string format
+      - name: repository_account
+        description: Name of the repository account
+      - name: repository_name
+        description: Name of the repository
+      - name: event_count
+        description: Count of all events
+      - name: user_count
+        description: Count of all users
+      - name: follow_count
+        description: Count of all FollowEvent events
+      - name: issues_count
+        description: Count of all IssuesEvent events
+      - name: watch_count
+        description: Count of all WatchEvent events
+      - name: fork_count
+        description: Count of all ForkEvent events
+      - name: push_count
+        description: Count of all PushEvent events
+      - name: pr_count
+        description: Count of all PullRequestEvent events
+      - name: delete_count
+        description: Count of all DeleteEvent events
+      - name: public_count
+        description: Count of all PublicEvent events
+      - name: create_count
+        description: Count of all CreateEvent events
+      - name: forkapply_count
+        description: Count of all ForkApplyEvent events
+      - name: gollum_count
+        description: Count off all GollumEvent events
+      - name: member_count
+        description: Count of all MemberEvent events
+      - name: gist_count
+        description: Count of all GistEvent events
+      - name: commit_comment_count
+        description: Count of all CommitCommentEvent events
+      - name: download_count
+        description: Count of all DownloadEvent events
+      - name: total_event_count
+        description: Sum of all events

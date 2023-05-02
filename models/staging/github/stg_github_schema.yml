@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_github_sql
+    description: Github daily tables in {{ var('github_date') }}
+    columns:
+      - name: _pk
+        description: Unique ID key
+        tests:
+          - unique
+          - not_null
+      - name: type
+        description: https://developer.github.com/v3/activity/events/types/
+      - name: is_public
+        description: Github repository set to public/private
+      - name: repo_id
+        description: Github repository ID
+      - name: repository_name
+        description: repo.name splitted first part
+      - name: organisation
+        description: repo.name splitted second part
+      - name: repo_url
+        description: Github repository url
+      - name: actor_id
+        description: Github repository owner ID
+      - name: actor_login
+        description: Github repository owner login
+      - name: actor_url
+        description: Github repository owner url
+      - name: org_id
+        description: Github organisation owner ID
+      - name: org_login
+        description: Github organisation owner login
+      - name: org_url
+        description: Github organisation owner url
+      - name: created_at_datetime_utc
+        description: create date
+      - name: other
+        description: Unknown JSON

@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: raw_airbyte
+    description: "{{ doc('gsheet_description') }}"
+    tables:
+      - name: gsheet_data

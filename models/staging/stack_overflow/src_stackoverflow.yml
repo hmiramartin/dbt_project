@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stackoverflow
+    description: "{{ doc('src_stackoverflow_description') }}"
+    database: bigquery-public-data
+    tables:
+      - name: posts_questions
+      - name: posts_answers

@@ -1,0 +1,152 @@
+version: 2
+models:
+  - name: mart_stackoverflow_daily
+    description: "stackoverflow questions daily"
+    columns:
+      - name: uni_pk
+        description: UNIQUE ID PK
+        tests:
+          - unique
+          - not_null
+      - name: first_day_of_period
+        description: Day of the events
+      - name: month
+        description: Month of the events
+      - name: year
+        description: always 2022
+      - name: quarter
+        description: Quarter of the period
+      - name: organization_name
+        description: Name of the company in a string format
+      - name: post_count
+        description: Count of the posts based on the ID
+      - name: answer_count
+        description: Count of the answers in total.
+      - name: avg_answer_count
+        description: Average number of answers for a question.
+      - name: comment_count
+        description: Count of the comments in total.
+      - name: avg_comment_count
+        description: Average number of comments for a question.
+      - name: favorite_count
+        description: Count of the favorites in total.
+      - name: avg_favorite_count
+        description: Average favorites for questions.
+      - name: view_count
+        description: Count of the views in total.
+      - name: avg_view_count
+        description: Average views of the questions.
+      - name: accepted_answer_count
+        description: Average of not null accepted_answer_id
+      - name: no_answer_count
+        description: Number of questions without answers.
+      - name: avg_no_answer_count
+        description: Average of questions without answers.
+      - name: score
+        description: Normalized value of the scores.
+      - name: tags_count
+        description: Number of matching tags.
+      - name: last_activity_datetime_utc
+        description: Maximum of last activity date.
+      - name: last_edit_datetime_utc
+        description: Maximum of last edit date.
+  - name: mart_stackoverflow_monthly
+    description: "stackoverflow questions monthly"
+    columns:
+      - name: uni_pk
+        description: UNIQUE ID PK
+        tests:
+          - unique
+          - not_null
+      - name: first_day_of_period
+        description: Day of the events
+      - name: month
+        description: Month of the events
+      - name: year
+        description: always 2022
+      - name: quarter
+        description: Quarter of the period
+      - name: organization_name
+        description: Name of the company in a string format
+      - name: post_count
+        description: Count of the posts based on the ID
+      - name: answer_count
+        description: Count of the answers in total.
+      - name: avg_answer_count
+        description: Average number of answers for a question.
+      - name: comment_count
+        description: Count of the comments in total.
+      - name: avg_comment_count
+        description: Average number of comments for a question.
+      - name: favorite_count
+        description: Count of the favorites in total.
+      - name: avg_favorite_count
+        description: Average favorites for questions.
+      - name: view_count
+        description: Count of the views in total.
+      - name: avg_view_count
+        description: Average views of the questions.
+      - name: accepted_answer_count
+        description: Average of not null accepted_answer_id
+      - name: no_answer_count
+        description: Number of questions without answers.
+      - name: avg_no_answer_count
+        description: Average of questions without answers.
+      - name: score
+        description: Normalized value of the scores.
+      - name: tags_count
+        description: Number of matching tags.
+      - name: last_activity_datetime_utc
+        description: Maximum of last activity date.
+      - name: last_edit_datetime_utc
+        description: Maximum of last edit date.
+  - name: mart_stackoverflow_quarterly
+    description: "stackoverflow questions quarterly"
+    columns:
+      - name: uni_pk
+        description: UNIQUE ID PK
+        tests:
+          - unique
+          - not_null
+      - name: first_day_of_period
+        description: Day of the events
+      - name: month
+        description: Month of the events
+      - name: year
+        description: always 2022
+      - name: quarter
+        description: Quarter of the period
+      - name: organization_name
+        description: Name of the company in a string format
+      - name: post_count
+        description: Count of the posts based on the ID
+      - name: answer_count
+        description: Count of the answers in total.
+      - name: avg_answer_count
+        description: Average number of answers for a question.
+      - name: comment_count
+        description: Count of the comments in total.
+      - name: avg_comment_count
+        description: Average number of comments for a question.
+      - name: favorite_count
+        description: Count of the favorites in total.
+      - name: avg_favorite_count
+        description: Average favorites for questions.
+      - name: view_count
+        description: Count of the views in total.
+      - name: avg_view_count
+        description: Average views of the questions.
+      - name: accepted_answer_count
+        description: Average of not null accepted_answer_id
+      - name: no_answer_count
+        description: Number of questions without answers.
+      - name: avg_no_answer_count
+        description: Average of questions without answers.
+      - name: score
+        description: Normalized value of the scores.
+      - name: tags_count
+        description: Number of matching tags.
+      - name: last_activity_datetime_utc
+        description: Maximum of last activity date.
+      - name: last_edit_datetime_utc
+        description: Maximum of last edit date.
